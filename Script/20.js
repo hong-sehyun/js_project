@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
             selarr = 0;
             document.querySelector('h2').innerHTML = '';
             for (let box of boxs) {
-                //box.innerHTML = box.getAttribute('id').slice(-1);
-                box.innerHTML = box.getAttribute('id').replace('box', '');
+                box.innerHTML = box.getAttribute('id').slice(-1);
+                //box.innerHTML = box.getAttribute('id').replace('box', '');
             }
         }
     });
@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     //div 박스 제어
     for (let box of boxs) {
         //박스에 번호 넣기
-        //box.innerHTML = box.getAttribute('id').slice(-1);
-        box.innerHTML = box.getAttribute('id').replace('box', '');
+        box.innerHTML = box.getAttribute('id').slice(-1);
+        //box.innerHTML = box.getAttribute('id').replace('box','');
 
         //클릭이벤트 처리
         box.addEventListener('click', () => {
