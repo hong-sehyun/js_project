@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 //폭탄 하트 구분
                 if (arr[n - 1] == 0) {
                     //하트
-                    box.innerHTML = '<img src="../img/hart.png">'
+                    box.innerHTML = '<img src="./img/hart.png">'
 
                     if (cnt == 8) {
                         flag = true;
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         let lastArr = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter((item) => !selarr.includes(item));
                         console.log(lastArr[0]);
-                        boxs[lastArr[0] - 1].innerHTML = '<img src="../img/boom.png">';
+                        boxs[lastArr[0] - 1].innerHTML = '<img src="./img/boom.png">';
 
                         //1이 있는 위치 찾기
                         //let lastn = arr.findIndex /////////////////////////////////
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 else {
                     //폭탄
-                    box.innerHTML = '<img src="../img/boom.png">';
+                    box.innerHTML = '<img src="./img/boom.png">';
                     flag = true;
                     document.querySelector('h2').innerHTML = '실패';
                 }
