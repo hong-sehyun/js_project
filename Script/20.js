@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         //1이 있는 위치 찾기
                         let lastn = arr.findIndex((item)=>item == 1) ;
                         console.log('find=', lastn);
-                        boxs[lastn].innerHTML = '<img src="./images/hart.png">';
+                        boxs[lastn].innerHTML = '<img src="./img/hart.png">';
                     }
                 }
                 else {
