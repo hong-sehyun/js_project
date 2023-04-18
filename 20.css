@@ -1,0 +1,20 @@
+.grid1{
+    display: flex;
+
+    justify-content: center;
+}
+
+.box {
+    width: 130px;
+    height: 130px;
+    border: 1px grey solid;
+}
+
+.bt {
+    display: flex;
+    margin: 12%;
+}
+
+h2{
+    color: red;
+}
