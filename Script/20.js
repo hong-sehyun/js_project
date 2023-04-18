@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(arr);
             flag = false;
             cnt = 0;
-            selarr = 0;
+            selarr = [];
             document.querySelector('h2').innerHTML = '';
             for (let box of boxs) {
                 box.innerHTML = box.getAttribute('id').slice(-1);
