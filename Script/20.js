@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
             flag = false;
             cnt = 0;
             selarr = [];
-            document.querySelector('h2').innerHTML = '';
+//            document.querySelector('h2').innerHTML = '';
             for (let box of boxs) {
                 box.innerHTML = box.getAttribute('id').slice(-1);
                 //box.innerHTML = box.getAttribute('id').replace('box', '');
