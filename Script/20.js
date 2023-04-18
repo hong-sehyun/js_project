@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
             selarr = 0;
             document.querySelector('h2').innerHTML = '';
             for (let box of boxs) {
-                boxs.innerHTML = '';
+                box.innerHTML = box.getAttribute('id').slice(-1);
             }
         }
     });
@@ -33,20 +33,24 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let box of boxs) {
         //박스에 번호 넣기
         box.innerHTML = box.getAttribute('id').slice(-1);
-
         //box.innerHTML = box.getAttribute('id').replace('box','');
 
         //클릭이벤트 처리
         box.addEventListener('click', () => {
+            //let n = parseInt(box.getAttribute('id').replace('box', ''));
+            let n = parseInt(box.textContent);
 
+            //기존에 하트나 폭탄이 들어있는 경우
+            if (isNaN(n)) return;
+
+            //폭탄이 눌러지지 않은 경우
             if (!flag) {
-                let n = parseInt(box.textContent);
-
-                if (isNaN(n)) return;
-                console.log('n=', n);
-
+                //선택 항목 추가
+                selarr.push(n);
+                console.log('n=', n, 'selarr=' , selarr);
                 cnt++;
-                console.log('cnt = ', cnt)
+                console.log("cnt=", cnt)
+
 
                 //폭탄 하트 구분
                 if (arr[n - 1] == 0) {
@@ -58,13 +62,14 @@ document.addEventListener("DOMContentLoaded", () => {
                         document.querySelector('h2').innerHTML = '성공';
 
                         //차집합 이용
-
-                        let lastArr = [1, 2, 3, 4, 5, 6, 7, 8, 9].filter((item) => !selarr.includes(item));
-                        console.log(lastArr[0]);
-                        boxs[lastArr[0] - 1].innerHTML = '<img src="./img/boom.png">';
+                        // let lastArr = [1,2,3,4,5,6,7,8,9].filter((item)=> !selarr.includes(item))
+                        // console.log(lastArr[0])
+                        // boxs[lastArr[0]-1].innerHTML = '<img src="./images/hart.png">';
 
                         //1이 있는 위치 찾기
-                        //let lastn = arr.findIndex /////////////////////////////////
+                        let lastn = arr.findIndex((item)=>item == 1) ;
+                        console.log('find=', lastn);
+                        boxs[lastn].innerHTML = '<img src="./images/hart.png">';
                     }
                 }
                 else {
